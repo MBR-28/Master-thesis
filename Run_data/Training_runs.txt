@@ -1,0 +1,356 @@
+Training run: 2025_04_20_21_36_43 
+Run 1
+Trener: --hidden=16,32,64,32,16 
+---2025_04_20_22_14_46---
+Final Train loss: 1.5115225315093994 +/- 0.004004128277301788
+Final Test loss: 1.0418994426727295 +/- 0.0034889522939920425
+Total time elapsed for program: 38 m 0.82 s
+Run 2
+Trener: --hidden=32,64,128,64,32 
+---2025_04_20_22_54_04---
+Final Train loss: 1.719336986541748 +/- 0.005097175948321819
+Final Test loss: 1.3375779390335083 +/- 0.005876285023987293
+Total time elapsed for program: 39 m 16.41 s
+Run 3
+Trener: --hidden=64,128,256,128,64 
+---2025_04_20_23_29_04---
+Final Train loss: 1.841831922531128 +/- 0.005314819049090147
+Final Test loss: 1.3351423740386963 +/- 0.006485086400061846
+Total time elapsed for program: 34 m 57.50 s
+Run 4
+Trener: --hidden=64,64,64,64,64 
+---2025_04_21_00_02_39---
+Final Train loss: 1.5613865852355957 +/- 0.004086101893335581
+Final Test loss: 1.4946255683898926 +/- 0.027717897668480873
+Total time elapsed for program: 33 m 32.80 s
+
+
+Training run: 2025_04_21_18_26_42 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=300
+---2025_04_21_18_59_21---
+Final Train loss: 1.7474238872528076 +/- 0.004774995613843203
+Final Test loss: 1.1807091236114502 +/- 0.003023565514013171
+Total time elapsed for program: 32 m 37.31 s
+Run 2
+Trener: --hidden=32,64,128,64,32 --steps_per_batch=350
+---2025_04_21_19_34_56---
+Final Train loss: 1.2790169715881348 +/- 0.002946077845990658
+Final Test loss: 1.03623628616333 +/- 0.004802044481039047
+Total time elapsed for program: 35 m 33.55 s
+Run 3
+Trener: --hidden=64,128,256,128,64 --steps_per_batch=400
+---2025_04_21_20_09_23---
+Final Train loss: 1.9805529117584229 +/- 0.03624674677848816
+Final Test loss: 1.0128040313720703 +/- 0.003374274354428053
+Total time elapsed for program: 34 m 24.38 s
+Run 4
+Trener: --hidden=64,64,64,64,64 --steps_per_batch=450
+---2025_04_21_21_02_20---
+Final Train loss: 3.5571725368499756 +/- 0.17285656929016113
+Final Test loss: 1.0594539642333984 +/- 0.0042125266045331955
+Total time elapsed for program: 52 m 55.73 s
+
+Training run: 2025_04_24_11_13_41 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=300
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=350
+Run 3
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400
+Run 4
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=450
+Run 1
+Trener: --hidden=16,32,64,32,16 --batches=250 
+Run 2
+Trener: --hidden=16,32,64,32,16 --batches=300
+Run 3
+Trener: --hidden=16,32,64,32,16 --batches=350
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=400
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=450
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=500Training run: 2025_04_24_11_17_24 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=300
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=350Training run: 2025_04_24_12_34_59 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=300
+---2025_04_24_13_15_56---
+Final Train loss: 3.6468942165374756 +/- 0.11674551665782928
+Final Test loss: 2.552501916885376 +/- 0.06448843330144882
+Total time elapsed for program: 40 m 54.18 s
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=350
+---2025_04_24_13_55_54---
+Final Train loss: 0.9562391042709351 +/- 0.0015032595256343484
+Final Test loss: 0.6656463742256165 +/- 0.001386612537316978
+Total time elapsed for program: 39 m 54.64 s
+Run 3
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400
+---2025_04_24_14_34_42---
+Final Train loss: 0.5775917172431946 +/- 0.0007709937635809183
+Final Test loss: 0.5145574808120728 +/- 0.0018285588594153523
+Total time elapsed for program: 38 m 45.12 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=450
+---2025_04_24_15_12_21---
+Final Train loss: 0.9788817167282104 +/- 0.002205108990892768
+Final Test loss: 0.6579878926277161 +/- 0.0020260533783584833
+Total time elapsed for program: 37 m 29.02 s
+Run 1
+Trener: --hidden=16,32,64,32,16 --batches=250 
+---2025_04_24_16_03_09---
+Final Train loss: 2.060755491256714 +/- 0.024776307865977287
+Final Test loss: 1.2464463710784912 +/- 0.0055536916479468346
+Total time elapsed for program: 50 m 44.83 s
+Run 2
+Trener: --hidden=16,32,64,32,16 --batches=300
+---2025_04_24_17_05_14---
+Final Train loss: 1.0748002529144287 +/- 0.006590888369828463
+Final Test loss: 0.6601302623748779 +/- 0.0019138801144436002
+Total time elapsed for program: 62 m 2.21 s
+Run 3
+Trener: --hidden=16,32,64,32,16 --batches=350
+---2025_04_24_18_19_11---
+Final Train loss: 0.4730730950832367 +/- 0.0005546917673200369
+Final Test loss: 0.37723642587661743 +/- 0.0015661915531381965
+Total time elapsed for program: 73 m 54.07 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=400
+---2025_04_24_19_45_43---
+Final Train loss: 0.7773833870887756 +/- 0.0032255076803267
+Final Test loss: 0.4858066737651825 +/- 0.0012421648716554046
+Total time elapsed for program: 86 m 29.02 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=450
+---2025_04_24_21_24_36---
+Final Train loss: 0.8492890000343323 +/- 0.0015380170661956072
+Final Test loss: 0.6364622712135315 +/- 0.0019726266618818045
+Total time elapsed for program: 98 m 42.76 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --batches=500
+---2025_04_24_23_02_05---
+Final Train loss: 1.0062026977539062 +/- 0.004531696438789368
+Final Test loss: 0.6354478597640991 +/- 0.0012698023347184062
+Total time elapsed for program: 97 m 25.42 s
+
+Training run: 2025_04_25_10_47_49 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150
+---2025_04_25_11_31_13---
+Final Train loss: 0.552495002746582 +/- 0.001967180287465453
+Final Test loss: 0.31101617217063904 +/- 0.0005326023674570024
+Total time elapsed for program: 43 m 22.15 s
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=200
+---2025_04_25_12_26_59---
+Final Train loss: 3.5070269107818604 +/- 0.13568992912769318
+Final Test loss: 1.6783804893493652 +/- 0.014528881758451462
+Total time elapsed for program: 55 m 42.01 s
+Run 3
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=250
+---2025_04_25_13_31_20---
+Final Train loss: 0.5112490057945251 +/- 0.0011552225332707167
+Final Test loss: 0.308228999376297 +/- 0.000412781402701512
+Total time elapsed for program: 64 m 13.05 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300
+---2025_04_25_14_46_31---
+Final Train loss: 0.38764697313308716 +/- 0.00026144602452404797
+Final Test loss: 0.32173043489456177 +/- 0.0005963194416835904
+Total time elapsed for program: 75 m 7.85 s
+Run 5
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=350
+---2025_04_25_16_15_06---
+Final Train loss: 0.6735479235649109 +/- 0.0007868743850849569
+Final Test loss: 0.483326256275177 +/- 0.0006496693822555244
+Total time elapsed for program: 88 m 31.61 s
+Training run: 2025_04_26_18_58_53 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False
+---2025_04_26_20_26_08---
+Final Train loss: 0.6677393317222595 +/- 0.0006617896724492311
+Final Test loss: 0.5031333565711975 +/- 0.0006718787481077015
+Total time elapsed for program: 87 m 13.72 s
+Training run: 2025_04_27_13_13_53 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5
+---2025_04_27_15_28_35---
+Final Train loss: 0.8175281882286072 +/- 0.0015697275521233678
+Final Test loss: 0.6125932931900024 +/- 0.002140863100066781
+Total time elapsed for program: 134 m 39.30 s
+Training run: 2025_04_30_15_40_24 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_15_44_30 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_15_45_54 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_15_53_41 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_00_14 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_06_18 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_36_08 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_40_43 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_43_18 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_16_56_30 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_17_03_53 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True
+Training run: 2025_04_30_17_08_22 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True --multiprocessing=False
+Training run: 2025_04_30_17_18_08 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True --multiprocessing=False
+Training run: 2025_04_30_17_40_14 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True --multiprocessing=False
+Training run: 2025_04_30_17_40_59 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True --multiprocessing=False
+Training run: 2025_04_30_17_43_45 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --use_tau=False --sample_buffer=0.5 --use_theta=True --multiprocessing=False
+Training run: 2025_04_30_17_46_47 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_04_30_17_47_12 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_04_30_17_47_27 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_04_30_17_49_06 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_04_30_17_52_56 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_04_30_18_16_44 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_05_01_16_13_15 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_05_01_16_19_19 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+Training run: 2025_05_01_16_22_11 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+Training run: 2025_05_01_16_22_55 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+Training run: 2025_05_01_16_31_44 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+Training run: 2025_05_01_16_34_31 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+Training run: 2025_05_01_16_39_17 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_01_17_52_54---
+Final Train loss: 2.1190130710601807 +/- 0.021317126229405403
+Final Test loss: 1.4627513885498047 +/- 0.01690020225942135
+Total time elapsed for program: 73 m 35.16 s
+
+
+
+Training run: 2025_05_01_20_32_31 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+Training run: 2025_05_01_20_37_09 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_01_21_39_48---
+Final Train loss: 4.516890525817871 +/- 0.017136506736278534
+Final Test loss: 2.3034863471984863 +/- 0.019610317423939705
+Total time elapsed for program: 62 m 36.90 s
+
+ALL RUNS UNTIL THIS POINT HAS HAD THE WRONG FINAL ERROR CALCULATIONS
+Training run: 2025_05_01_21_58_25 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=150 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_01_23_11_43---
+Final Train loss: 0.011195382103323936 +/- 0.0684318020939827
+Final Test loss: 2.310124397277832 +/- 0.015768863260746002
+Total time elapsed for program: 73 m 16.24 s
+
+
+Training run: 2025_05_07_12_21_23 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=True --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_07_13_36_59---
+Final Train loss: 0.015003946609795094 +/- 0.03543331101536751
+Final Test loss: 4.178972244262695 +/- 0.02980177477002144
+Total time elapsed for program: 75 m 33.55 s
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_07_14_52_26---
+Final Train loss: 0.0095041673630476 +/- 0.06262408196926117
+Final Test loss: 2.237361431121826 +/- 0.01572585664689541
+Total time elapsed for program: 75 m 18.93 s
+Run 3
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=True --sample_buffer=0.5 --theta=False --multiprocessing=True
+---2025_05_07_17_12_36---
+Final Train loss: 0.0001723131281323731 +/- 0.0003246209817007184
+Final Test loss: 0.0989997535943985 +/- 0.00035424920497462153
+Total time elapsed for program: 140 m 1.53 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=False --multiprocessing=True
+---2025_05_07_19_04_45---
+Final Train loss: 0.000275457656243816 +/- 0.0007909427513368428
+Final Test loss: 0.1387403905391693 +/- 0.000351035239873454
+Total time elapsed for program: 112 m 5.58 s
+
+Run 5
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=False
+---2025_05_07_23_13_34---
+Final Train loss: 0.008504238910973072 +/- 0.023576419800519943
+Final Test loss: 3.3512396812438965 +/- 0.028811251744627953
+Total time elapsed for program: 238 m 28.86 s
+Training run: 2025_05_09_15_07_57 
+Run 1
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=100 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_09_15_59_20---
+Final Train loss: 0.005671768914908171 +/- 0.010803877376019955
+Final Test loss: 1.8074455261230469 +/- 0.010774883441627026
+Total time elapsed for program: 51 m 20.58 s
+Run 2
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=200 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_09_17_06_41---
+Final Train loss: 0.007164573762565851 +/- 0.015735870227217674
+Final Test loss: 1.7179206609725952 +/- 0.011366957798600197
+Total time elapsed for program: 67 m 17.91 s
+Run 3
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=300 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_09_18_20_30---
+Final Train loss: 0.007014039438217878 +/- 0.01708187349140644
+Final Test loss: 2.747249126434326 +/- 0.038255736231803894
+Total time elapsed for program: 73 m 45.65 s
+Run 4
+Trener: --hidden=16,32,64,32,16 --steps_per_batch=400 --batches=350 --samples_per_batch=300 --tau=False --sample_buffer=0.5 --theta=True --multiprocessing=True
+---2025_05_09_19_37_24---
+Final Train loss: 0.008820686489343643 +/- 0.027239132672548294
+Final Test loss: 2.2766482830047607 +/- 0.01693541556596756
+Total time elapsed for program: 76 m 51.12 s
