@@ -16,13 +16,13 @@ from time import time
 m = 1/2 #kg
 g = 9.81 # m/s**2
 L = 1 #m
-
+'''
 #Lagrangian
 def Lagrangian(koord):
     q,dq = np.split(koord,2)
     lag= 0.5*m*dq*dq - m*g*np.sin(q/L)
     return lag
-
+'''
 
 #Define Hamiltonian formula (q,p)
 
@@ -60,10 +60,10 @@ def dynamics(t,koord):
     '''
     #tau based on spring dampner
     kp = 5
-    kd = 7
+    kd =-7
     th0 = np.pi/2
 
-    tau = kp*(th0-(q/L)) + kd*(q/L)
+    tau = kp*(th0-(q/L)) + kd*(dq/L)
 
 
     p = m*dq
@@ -124,22 +124,13 @@ def trajectory(t_span=[0,3],t_scale=10,noise=0.1,tolerance = 1e-10):
 
     #bruk S til å beregne dqdt og dpdt 
     #using no tau as gradient doesn't work for single values
-    arm_ivp = solve_ivp(fun=no_tau_dynamics,t_span=t_span,y0=qdq0,t_eval=eval_time,rtol=tolerance)
+    arm_ivp = solve_ivp(fun=dynamics,t_span=t_span,y0=qdq0,t_eval=eval_time,rtol=tolerance)
     qdq1 = np.array([arm_ivp['y'][0], arm_ivp['y'][1]])
 
     q1,dq1 = np.split(qdq1,2)
     
-    ''''
-    print(q1)
-    print(q2)
-    print(dq1)
-    print(dq2)
-
-    print(np.shape(q1))
-    print(np.shape(dq1))
-    '''
     q,dq = [],[]
-    
+    #Removal of excess list nesting
     for l in range(len(q1[0])):
         tempq = np.array([q1[0][l]])
         q.append(tempq)
@@ -147,7 +138,7 @@ def trajectory(t_span=[0,3],t_scale=10,noise=0.1,tolerance = 1e-10):
         dq.append(tempdq)
         
     dqdt,dpdt = [],[]
-    #print("BBBB")
+    #Calculation of gradients due to solve_ivp not outputing gradients.
     for i in range(len(q)):
         x = np.array([q[i][0],dq[i][0]])
         dyn = dynamics(None,x)
@@ -160,12 +151,7 @@ def trajectory(t_span=[0,3],t_scale=10,noise=0.1,tolerance = 1e-10):
     dqdt = np.array(dqdt)
     dpdt = np.array(dpdt)
 
-    '''
-    print(np.shape(q))
-    print(np.shape(dq))
-    print(np.shape(dqdt))
-    print(np.shape(dpdt))
-    '''
+   
 
     #sammenligne dq1 og dqdt for å se om de er den samme?
     #korriger?
@@ -229,7 +215,6 @@ def no_tau_trajectory(t_span=[0,3],t_scale=10,noise=0.1,tolerance = 1e-10):
     for i in range(len(q)):
         x = np.array([q[i][0],dq[i][0]])
         dyn = no_tau_dynamics(None,x)
-        #print(dyn)
         dqdt.append(np.array([dyn[0][0]]))
         dpdt.append(np.array([dyn[0][1]]))
     
@@ -238,12 +223,7 @@ def no_tau_trajectory(t_span=[0,3],t_scale=10,noise=0.1,tolerance = 1e-10):
     dqdt = np.array(dqdt)
     dpdt = np.array(dpdt)
 
-    '''
-    print(np.shape(q))
-    print(np.shape(dq))
-    print(np.shape(dqdt))
-    print(np.shape(dpdt))
-    '''
+    
 
     #sammenligne dq1 og dqdt for å se om de er den samme?
     #korriger?
@@ -305,7 +285,7 @@ def dataset_theta(multiprocessing=False, seed=None,samples=60,split_point = 30,t
         t0 = time()
         MultiProc = []
 
-        with cf.ProcessPoolExecutor(max_workers=6) as executor:
+        with cf.ProcessPoolExecutor(max_workers=6) as executor: 
 
             if tau==True:
                 for j in range(samples):

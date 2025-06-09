@@ -68,15 +68,15 @@ class HNNG(th.nn.Module):
         self.separate = separate
 
     def forward(self, inp):
-
+        # Based on the code associated https://arxiv.org/pdf/1906.01563
         F1, F2 =  self.base_model(inp).split(1,1)
 
-        #print(F1)
+        
 
         conservative = th.zeros_like(inp)
         solenoidal = th.zeros_like(inp)
 
-        #MENTION THIS
+        
 
         dF1 = th.autograd.grad(F1.sum(),inp,create_graph=True)[0]
         conservative = dF1 @ self.eye
@@ -107,7 +107,8 @@ HNN model with a lagrangian tau calculation: BAD IDEA, THE GRADIENT CALCULATION 
 """
 
 """
-HNN with a NN calculated tau (simmilar to Dissipative HNN) Sosanya: RUNNING OUT OF TIME
+HNN with a NN calculated tau (simmilar to Dissipative HNN) Sosanya: 
+NO TIME, STILL NO GOOD WAY TO FIND TAU, SEPARATE TAU CPOORD WOULD ALSO NEED ALMOST FULL CODE REWORK
 """
 
 

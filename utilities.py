@@ -15,7 +15,7 @@ L2-Loss
 """
 
 def L2(y,u):
-    return (y-u).pow(2).sum().sqrt()
+    return (y-u).pow(2).sum()#.sqrt()
 
 
 """
@@ -32,6 +32,8 @@ def nonlin_choice(what):
         case _:
             return th.nn.functional.linear
         
+
+
 """
 Choose optimizer
 """
@@ -83,7 +85,7 @@ def choose_optimizer(model,args):
 
 
 """
-Lagre data hvis man ønsker
+Save a dataset 
 """
 
 class NpEncoder(js.JSONEncoder):
@@ -106,7 +108,7 @@ def savedatadict(data,name,wanted_placement_path:Path):
 
 
 """
-Laste inn daten fra fila
+Load a dataset 
 """
 
 def loaddatadict(name, location:Path):
@@ -118,19 +120,36 @@ def loaddatadict(name, location:Path):
             dt[i] = np.asarray(data[i])
     return dt
 
+"""
+Load the Args dictionary
+"""
+def loadargsdict(name, location:Path):
+    dt ={}
+    where = location/f"{name}.json"
+    with where.open('r') as file:
+        dt = js.load(file)
+    return dt
 
-def Get_time():
-    return datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S')
 
+'''
+Save the model
+'''
 
 def Save_model(model:th.nn.Module,name,location:Path):
     where = location/f"{name}.tar"
     th.save(model.state_dict(), where)
 
-
+'''
+Export a string to a text file of choice
+'''
 
 def text_export(info,name,location):
     with open(location/f"{name}.txt","a") as f:
         f.write(str(info))
 
+'''
+Gets the time in string form
+'''
 
+def Get_time():
+    return datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S')

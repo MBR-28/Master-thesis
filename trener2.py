@@ -26,7 +26,7 @@ import models
 import utilities
 
 """
-Ad function to help argument parsing
+Ad function to help argument parsing, a workaround to make an in terminal definition of hidden work.
 """
 def int_list(arg):
     return list(map(int, arg.split(',')))
@@ -46,7 +46,7 @@ def get_arguments():
 
     parser.add_argument('--t_span', default = [0,3], type = list, help = 'span of time used in trajectory generation')
     parser.add_argument('--t_scale', default = 10, type = int, help = 'number of datapoints per trajectory')
-    parser.add_argument('--noise', default = 0.1, type = int, help = 'noise to add to input to avoid overfitting')
+    parser.add_argument('--noise', default = 0.1, type = float, help = 'noise to add to input to avoid overfitting')
     parser.add_argument('--tolerance', default = 1e-10, type = int, help = 'tolerance in the solve ivp step of trajectory generation')
 
 
@@ -82,7 +82,7 @@ def get_arguments():
     parser.add_argument('--name', default='Graydanus-HNN', type=str, help='only this option right now')
     
     parser.add_argument('--use_cuda',default= True, type=bool,help='Run with cuda compatible graphics processor?')
-    parser.add_argument('--multiprocessing', default=False,type=bool, help='Use multithreading?')
+    parser.add_argument('--multiprocessing', default=False,type=bool, help='Use multiprocessing to let the computer use more than one logic core to do the data generation work?')
 
     parser.add_argument('--Loss_type', default = 'MSE', type = str, help = 'Choose L2 or MSE loss type')
 
@@ -102,11 +102,13 @@ def trener(args):
     th.manual_seed(args.seed)
     np.random.default_rng(args.seed)
     
-    #Theta or xy
+    #Theta or xy Needs rewriting to handle more complex systems.
     if args.theta == False:
+        #XY
         args.input_size = 4
     else:
-        print("AAA")
+        
+        #Theta
         args.input_size = 2
 
 
@@ -144,6 +146,7 @@ def trener(args):
     output_size = args.input_size if args.baseline else 2
 
     if args.baseline:
+
         if args.use_cuda:
             model = models.BasicNN(args.input_size,output_size,args.nonlinearity,args.hidden).cuda() 
         else:
@@ -168,25 +171,25 @@ def trener(args):
     #get/load dataset, save if wanted
 
     print("Dataset")
-    if args.save_dataset:
-        #distinguisher = input("Add something to avoid identical datafile name: ")
-        distinguisher = "Test" + str(np.iinfo(np.int32).max)
+    
+        
 
 
 
     if args.load_dataset!=None:
         print("Loading dataset")
         data = utilities.loaddatadict(args.load_dataset,args.data_save_dir)
-        assert len(data)==args.input_size,"The loaded dataset does not contain the correct number of objects"
+        assert len(data['qp'][0])==args.input_size,"The loaded dataset does not have the correct number of input values"
+        assert len(data['qp'])==args.samples,"The loaded dataset is to small for the current batch, batchsize, testsize, and buffer parameters"
         print("Dataset succesfully loaded")
     else:
         if args.theta == False:
             data = Data_gen2.dataset(multiprocessing=args.multiprocessing, samples=args.samples, split_point = train_samples,seed=args.seed,t_span=args.t_span,t_scale=args.t_scale,noise=args.noise,tolerance=args.tolerance, tau=args.tau )
         else:
-            print("BBB")
             data = Data_gen2_theta.dataset_theta(multiprocessing=args.multiprocessing, samples=args.samples, split_point = train_samples,seed=args.seed,t_span=args.t_span,t_scale=args.t_scale,noise=args.noise,tolerance=args.tolerance, tau=args.tau )
     
     if args.save_dataset:
+        distinguisher = args.name + str(np.iinfo(np.int32).max)
         print("Saving Dataset")
         utilities.savedatadict(data,f"Dataset {args.name} {distinguisher}", args.data_save_dir)
     
