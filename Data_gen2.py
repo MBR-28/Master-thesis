@@ -77,12 +77,9 @@ def dynamics(t,koord):
     dH = autograd.grad(Hamiltonianxy)(koord2)
     dqdt, dpdt = np.split(dH,2)
 
-    #print(dqdt)
-    #print(np.shape(dqdt))
-    #print(np.shape(dpdt))
-    S=np.concatenate([dqdt.T,-dpdt.T+tau],axis=1)
-    #print(np.shape(S))
-    #print(S)
+    
+    #S=np.concatenate([dqdt.T,-dpdt.T+tau],axis=1)
+    S=np.concatenate([dqdt.T,(-dpdt.T+tau)/m],axis=1)
     return S
 
 
@@ -108,12 +105,9 @@ def no_tau_dynamics(t,koord):
     dH = autograd.grad(Hamiltonianxy)(koord2)
     dqdt, dpdt = np.split(dH,2)
 
-    #print(dqdt)
-    #print(np.shape(dqdt))
-    #print(np.shape(dpdt))
-    S=np.concatenate([dqdt.T,-dpdt.T],axis=1)
-    #print(np.shape(S))
-    #print(S)
+    
+    #S=np.concatenate([dqdt.T,-dpdt.T],axis=1)
+    S=np.concatenate([dqdt.T,(-dpdt.T)/m],axis=1)
     return S
 
 

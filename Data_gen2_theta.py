@@ -12,7 +12,7 @@ import concurrent.futures as cf
 from time import time
 
 
-#Defining constant parameters
+#Defining constant Global parameters
 m = 1/2 #kg
 g = 9.81 # m/s**2
 L = 1 #m
@@ -73,12 +73,9 @@ def dynamics(t,koord):
     dH = autograd.grad(Hamiltonian)(koord2)
     dqdt, dpdt = np.split(dH,2)
 
-    #print(dqdt)
-    #print(np.shape(dqdt))
-    #print(np.shape(dpdt))
-    S=np.concatenate([dqdt,-dpdt+tau],axis=1)
-    #print(np.shape(S))
-    #print(S)
+    
+    #S=np.concatenate([dqdt,-dpdt+tau],axis=1)
+    S=np.concatenate([dqdt,(-dpdt+tau)/m],axis=1)
     return S
 
 
@@ -99,12 +96,8 @@ def no_tau_dynamics(t,koord):
     dH = autograd.grad(Hamiltonian)(koord2)
     dqdt, dpdt = np.split(dH,2)
 
-    #print(dqdt)
-    #print(np.shape(dqdt))
-    #print(np.shape(dpdt))
-    S=np.concatenate([dqdt,-dpdt],axis=1)
-    #print(np.shape(S))
-    #print(S)
+    #S=np.concatenate([dqdt,-dpdt],axis=1)
+    S = np.concatenate([dqdt,-dpdt/m],axis=1)
     return S
 
 
