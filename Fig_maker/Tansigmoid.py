@@ -38,5 +38,5 @@ plt.title('tanh and sigmoid')
 plt.legend()
 plt.grid()
 
-plt.savefig(fname=Fig_Save_Dir/'Tanhsigmoid.png')
+plt.savefig(fname=Fig_Save_Dir/'Tanhsigmoid.png',dpi=300)
 plt.show()

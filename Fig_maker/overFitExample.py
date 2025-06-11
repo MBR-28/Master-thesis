@@ -80,5 +80,5 @@ ax[1,1].set_ylabel('Out')
 
 plt.subplots_adjust(wspace=0.5,hspace=0.5)
 
-plt.savefig(fname=Fig_Save_Dir/'Fitting.png')
+plt.savefig(fname=Fig_Save_Dir/'Fitting.png',dpi=300)
 plt.show()

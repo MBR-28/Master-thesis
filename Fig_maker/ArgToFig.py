@@ -117,7 +117,7 @@ def TimeNameToFig(time,name,num):
     
     plt.legend()
 
-    plt.savefig(fname=Fig_Save_Dir/f"{name}_{time}.png")
+    plt.savefig(fname=Fig_Save_Dir/f"{name}_{time}.png",dpi=300)
     plt.close()
     #plt.show()
 
